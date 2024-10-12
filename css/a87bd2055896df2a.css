@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Poppins:wght@400&display=swap");:root {
+    --project-card-height: 300px
+}
+
+body,html {
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+* {
+    box-sizing: border-box
+}
+
+h1,h2,h3,h4,h5,h6,p {
+    -webkit-margin-before: 0;
+    margin-block-start:0;-webkit-margin-after: 0;
+    margin-block-end:0}
+
+a,button {
+    z-index: 99999!important
+}
+
+#tsparticles,canvas {
+    z-index: -9999!important;
+    background-color: #000
+}
+
+#animation {
+    width: 50%!important;
+    height: 100%!important
+}
+
+.animation_canvas {
+    width: 100%!important;
+    height: 100%!important
+}
+
+.hidden_in_desktop {
+    display: none!important
+}
+
+.hidden_in_mobile {
+    display: block!important
+}
+
+body::-webkit-scrollbar {
+    width: 10px!important;
+    background: #000!important
+}
+
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0,0,0,.3)
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    outline: 1px solid #708090
+}
+
+@media screen and (max-width: 768px) {
+    #animation {
+        width:100%!important
+    }
+
+    .hidden_in_desktop {
+        display: inline-block!important
+    }
+
+    .hidden_in_mobile {
+        display: none!important
+    }
+}
