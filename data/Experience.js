@@ -2,8 +2,8 @@ export const ExperienceList = [
     {
         company: "Monosage",
         role: "Software Developer Intern",
-        from: "August 2024",
-        to: "Present",
+        from: "May 2024",
+        to: "August 2024",
         color: "linear-gradient(351deg, rgba(255,170,0,1) 1%, rgba(236,147,39,1) 67%)",
         logo: '/work/monosage.jpg',
         activities: 'Developed two WordPress sites, boosting client retention and increasing inquiries and hosted them.'
