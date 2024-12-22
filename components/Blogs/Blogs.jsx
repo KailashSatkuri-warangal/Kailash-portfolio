@@ -1,6 +1,5 @@
 import styles from '../../styles/Blogs.module.css'
 import Card from './Card/Card'
-
 function Blogs(props) {
     
     let blogs = props.blogs
@@ -16,7 +15,7 @@ function Blogs(props) {
                 <Card
                 key={index}
                 name={blog.title}
-                image={blog.thumbnail}
+                image={blog.image}
                 link={blog.link}
                 date = {blog.pubDate}
                 />)}
