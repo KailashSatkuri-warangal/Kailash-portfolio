@@ -29,13 +29,28 @@ export const ProjectsList = [{
         github: 'https://github.com/KailashSatkuri-warangal/Text-to-image-Generation',
         hosted: false,
         host_link: 'https://github.com/KailashSatkuri-warangal/Text-to-image-Generation'
+    },
+    {
+        name: 'Discount Calculator Aicte Intership',
+        description: 'Devloped from android devloper console extended few features to the app devlopment as basic versions',
+        image: '/Projects/shop.png',
+        github: 'https://github.com/KailashSatkuri-warangal/discountcalculator',
+        hosted: false,
+        host_link: ''
+    },{
+        name: 'Tic-Tac-Toe Aicte Intership',
+        description: 'Devloped from android devloper console extended few features to the app devlopment as intermediate game logic used',
+        image: '/Projects/tic.png',
+        github: 'https://github.com/KailashSatkuri-warangal/Tic-Tac-Toe',
+        hosted: false,
+        host_link: ''
     }/*,
     {
-        name: 'Website',
-        description: '',
-        image: '/Projects/.png',
-        github: '',
-        hosted: true,
+        name: 'Tic-Tac-Toe Aicte Intership',
+        description: 'Devloped from android devloper console estended few features to the app devlopment',
+        image: '/Projects/tic.png',
+        github: 'https://github.com/KailashSatkuri-warangal/Tic-Tac-Toe',
+        hosted: false,
         host_link: ''
     },
     {
