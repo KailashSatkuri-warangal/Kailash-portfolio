@@ -24,16 +24,6 @@ const links = [
     link:'https://github.com/KailashSatkuri-warangal'
 },
 {
-    name:'Facebook',
-    icon:'/Contact/facebook.svg',
-    link:''
-},
-{
-    name:'Instagram',
-    icon:'/Contact/instagram.svg',
-    link:''
-},
-{
     name:'Twitter',
     icon:'/Contact/twitter.svg',
     link:'https://twitter.com/KSatkuri95221'
