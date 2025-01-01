@@ -44,7 +44,24 @@ export const ProjectsList = [{
         github: 'https://github.com/KailashSatkuri-warangal/Tic-Tac-Toe',
         hosted: false,
         host_link: ''
-    }/*,
+    },{
+        name: 'Basic TO-DO Reminder Python Flask',
+        description: 'I devloped using prevoius python flask knowledge to make basic todo reminder app',
+        image: '/Projects/todo.png',
+        github: 'https://github.com/KailashSatkuri-warangal/todoflaskpy',
+        hosted: false,
+        host_link: ''
+    },
+    {
+        name: 'Crop Prediction Using Machine Learning',
+         description: 'I devloped using prevoius python flask knowledge to make train_model() that uses TensorFlow to train a binary classification convolutional neural network (CNN) for image classification, applying data augmentation, and using callbacks for early stopping and model checkpointing',
+         image: '/Projects/crop.png',
+        github: 'https://github.com/KailashSatkuri-warangal/cropdetection',
+        hosted: false,
+        host_link: ''
+    }
+
+    /*,
     {
         name: 'Tic-Tac-Toe Aicte Intership',
         description: 'Devloped from android devloper console estended few features to the app devlopment',
