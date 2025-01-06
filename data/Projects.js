@@ -8,7 +8,7 @@ export const ProjectsList = [{
     },
     {
         name: 'LearnVidya LMS portel',
-        description: 'An Intership program where LearnVidya is a Learning Management System (LMS) portal developed using WordPress, designed to facilitate online learning and course management. The platform allows educators to create, manage, and deliver online courses to students, providing an interactive and user-friendly environment. It includes features like course enrollment, quizzes, assignments, discussion forums, and certificates upon course completion. LearnVidya is built with custom WordPress themes and plugins to ensure scalability, flexibility, and an intuitive user experience. The portal also supports various multimedia content formats, such as videos, PDFs, and interactive lessons, to enhance the learning process.',
+        description: 'Participated in an internship program developing LearnVidya, an LMS portal built with WordPress for online course management. The platform features course creation, quizzes, and certificates, offering a user-friendly, interactive learning experience with support for various multimedia content.',
         image: '/Projects/lms.png',
         github: null,
         hosted: true,
@@ -54,9 +54,17 @@ export const ProjectsList = [{
     },
     {
         name: 'Crop Prediction Using Machine Learning',
-         description: 'I devloped using prevoius python flask knowledge to make train_model() that uses TensorFlow to train a binary classification convolutional neural network (CNN) for image classification, applying data augmentation, and using callbacks for early stopping and model checkpointing',
-         image: '/Projects/crop.png',
+        description: 'I devloped using prevoius python flask knowledge to make train_model() that uses TensorFlow to train a binary classification convolutional neural network (CNN) for image classification, applying data augmentation, and using callbacks for early stopping and model checkpointing',
+        image: '/Projects/crop.png',
         github: 'https://github.com/KailashSatkuri-warangal/cropdetection',
+        hosted: false,
+        host_link: ''
+    },
+    {
+        name: 'Facial Expression Detection using CNN',
+        description: 'Developed a CNN-based facial expression recognition model using the FER2013 dataset. Utilized TensorFlow and Keras for building and training the model, achieving classification of seven emotions. Preprocessed data with NumPy, Pandas, and OpenCV, and implemented efficient train-validation splitting with scikit-learn.',
+        image: '/Projects/facial.png',
+        github: 'https://github.com/KailashSatkuri-warangal/Facial-emotions',
         hosted: false,
         host_link: ''
     }
