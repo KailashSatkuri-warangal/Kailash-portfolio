@@ -9,7 +9,7 @@ function ProfileText() {
             <h2 style={{marginBlockEnd:"5rem"}} >I’m Kailash, <br/>
                 A <Role/> <br/>
             </h2>
-            <a href = "https://drive.google.com/file/d/1LPyZFs0A9NTANOEbmNj7nIwPiYB3f66N/view?usp=sharing" target="_blank" without rel="noreferrer" className={styles.a} >Download CV &nbsp; <i className="fas fa-cloud-download-alt fa-md"></i></a>
+            <a href= "https://drive.google.com/file/d/1c5MD1g6v2r6j_Y6Us1Hf4Y0rLyTPSygZ/view?usp=sharing" target="_blank" without rel="noreferrer" className={styles.a} >Download CV &nbsp; <i className="fas fa-cloud-download-alt fa-md"></i></a>
         </div>
     )
 }
