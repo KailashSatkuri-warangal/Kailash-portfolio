@@ -13,6 +13,4 @@ function ProfileText() {
         </div>
     )
 }
-
-
 export default ProfileText
