@@ -8,7 +8,9 @@ import Experience from '../components/Experience/Experience'
 import Projects from '../components/Projects/Projects'
 import Blogs from '../components/Blogs/Blogs'   
 import Contact from '../components/Contact/Contact'
-import Patreon from '../components/Patreon/Patreon'
+// import Patreon from '../components/Patreon/Patreon'
+
+import Github from '../components/Github/Github'
 import Loader from '../components/Loader/Loader'
 import Script from 'next/script'
 import Meta from '../public/Profile/meta.png'
@@ -23,7 +25,7 @@ export async function getStaticProps(context) {
     blogs[0].image = "/work/quantum.png";
 
     return {
-      props: {blogs}, // will be passed to the page component as props
+      props: {blogs}, // will be passed to the page component as props in line of `return <Component {...pageProps} />`
     }
 }
 
@@ -44,7 +46,8 @@ export default function Home({blogs}) {
         <meta name="image" property="og:image" content={Meta} />
       </Head>
       <Particles id="tsparticles" options={particleOptions} />
-      <Patreon/>
+      {/* <Patreon/> */}
+      <Github/>
       <Navbar/>
       <Profile/>
       <About/>
