@@ -12,7 +12,7 @@ function About() {
                     <br/>
                     <br/>In addition to coding, I enjoy technical blogging on current and upcoming technologies. All of my blogs are available on <a href="https://medium.com/@satkurikailash" target="_blank" without rel="noreferrer">Medium | Satkuri Kailash</a>, where I post articles frequently.
                     <br/>
-                    <br/>I like to improve my problem solving abilities through code generation by solving questions as part of competitive programming and other questions related to Data Structures and Algorithms. This in turn assists me to get the most out of the applications that I create hence enhancing their performance and capability to cater for large traffic. My LeetCode profile <a href="https://leetcode.com/u/2203a52174/" target="_blank" without rel="noreferrer">Leetcode | Satkuri Kailash</a> shows my problem-solving ability.
+                    <br/>I like to improve my problem solving abilities through code generation by solving questions as part of competitive programming and other questions related to Data Structures and Algorithms. This in turn assists me to get the most out of the applications that I create hence enhancing their performance and capability to cater for large traffic. My LeetCode profile <a href="https://leetcode.com/u/satkuri_Kailash/" target="_blank" without rel="noreferrer">Leetcode | Satkuri Kailash</a> shows my problem-solving ability.
                 </p>
                 {/* <Animation></Animation> */}
             </div>
