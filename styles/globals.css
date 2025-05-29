@@ -60,13 +60,8 @@ canvas {
     display: block !important;
 }
 
-<<<<<<< HEAD
 body::-webkit-scrollbar {
     width: 5px !important;
-=======
-/* body::-webkit-scrollbar {
-    width: 10px !important;
->>>>>>> 2373177724e2a1498c8608c5d26fcc2ec12092b5
     background: black !important;
 }
 body::-webkit-scrollbar-track {
@@ -76,45 +71,7 @@ body::-webkit-scrollbar-track {
   body::-webkit-scrollbar-thumb {
     background-color: white;
     outline: 1px solid slategrey;
-<<<<<<< HEAD
   }
-=======
-  } */
-.scroll-content::-webkit-scrollbar {
-  width: 1px;
-}
-
-.scroll-content::-webkit-scrollbar-track {
-  background: black;
-}
-
-.scroll-content::-webkit-scrollbar-thumb {
-  background-color: white;
-  border-radius: 3px;
-}
-
-.scroll-arrow {
-  position: absolute;
-  width: 50%;
-  text-align: center;
-  font-size: 16px;
-  background: rgba(0, 0, 0, 0.7);
-  color: white;
-  cursor: pointer;
-  z-index: 2;
-  padding: 4px 0;
-  user-select: none;
-}
-
-.up-arrow {
-  top: 0;
-}
-
-.down-arrow {
-  bottom: 0;
-}
-
->>>>>>> 2373177724e2a1498c8608c5d26fcc2ec12092b5
 @media screen and (max-width: 768px) {
     #animation {
         width: 100% !important;
