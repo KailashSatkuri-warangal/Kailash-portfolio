@@ -1,0 +1,24 @@
+.patreon{
+    background: rgb(255, 186, 66);
+    color: white;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 13px;
+    padding:7px 12px;
+
+    transition: 0.2s;
+    font-family: "Poppins";
+    z-index: 1000000;
+}
+
+.patreon:hover{
+    transform: scale(1.05);
+    border: 1px solid white;
+    font-weight: bold;
+}
+
+.patreon svg{
+    vertical-align: middle;
+    margin-right:5px;
+}

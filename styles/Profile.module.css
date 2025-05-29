@@ -1,0 +1,132 @@
+.profile {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5rem;
+}
+
+.profileImage {
+    width: 50%;
+    height: fit-content;
+    padding-left: 100px;
+    padding-top: 30px;
+    margin-right: -9%;
+    z-index: 2;
+}
+
+.profileImage img {
+    width: 80%;
+    height: 70%;
+}
+
+.profileText {
+    height: 500px;
+    width: 100%;
+    background-color: #ffffff36;
+    padding: 10px;
+    padding-left: 6%;
+    padding-top: 8%;
+    margin-top: -100px;
+}
+
+.profileText h1,
+.profileText h2 {
+    color: white;
+    animation: profile-text-animation 0.7s ease-in;
+}
+
+.profileText h1 {
+    font-size: 4em;
+}
+
+.profileText h2 {
+    font-size: 2.4em
+}
+
+.profileText p {
+    margin: 1.5rem 0px;
+    color: white;
+    width: 70%;
+}
+
+.a {
+    background-color: transparent;
+    outline: none;
+    color: white;
+    border: 1px solid white;
+    font-size: 1.1em;
+    padding: 9px 13px;
+    cursor: pointer;
+    transition: 0.4s;
+    text-decoration: none;
+    margin-top: 5rem;
+}
+
+.a:hover {
+    background-color: white;
+    color: rgb(53, 52, 52);
+}
+
+@keyframes profile-text-animation {
+    0% {
+        padding-top: 150px;
+        opacity: 0;
+    }
+    100% {
+        padding-top: 0px;
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .profile {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .profileText {
+        height: 400px;
+        padding-top: 100px;
+    }
+    .profileText h1 {
+        font-size: 3em;
+    }
+    .profileText h2 {
+        font-size: 1.8em;
+        min-height: 120px;
+        margin-block-end: 2rem !important;
+    }
+    .profileImage {
+        width: 85%;
+        height: 50%;
+    }
+    .profileImage img {
+        width: 100% !important;
+        height: 100% !important;
+    }
+}
+@media screen and (max-width: 968px) {
+    .profile {
+        flex-direction: column;
+        align-items: center;
+    }
+    .profileImage {
+        width: 85%;
+        height: 50%;
+    }
+    .profileImage img {
+        width: 100% !important;
+        height: 100% !important;
+    }
+}
+@media screen and (max-width: 1230px) {
+    .profileImage {
+        width: 95%;
+        height: 50%;
+    }
+    .profileImage img {
+        width: 100% !important;
+        height: 100% !important;
+    }
+}

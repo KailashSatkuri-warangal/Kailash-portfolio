@@ -1,0 +1,107 @@
+.nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000000000;
+}
+.glowingText {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    transition: text-shadow 0.3s ease-in-out;
+  }
+  
+.nav span,
+.nav ul {
+    padding: 10px 20px;
+    list-style: none;
+}
+
+.nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav span,
+.nav ul li a {
+    color: white;
+    cursor: pointer;
+}
+
+.nav ul li {
+    min-width: fit-content;
+    margin: 0px 15px
+}
+
+.nav ul li a {
+    text-decoration: none;
+    opacity: 0.9;
+}
+
+.nav span p {
+    font-size: 2.5em;
+    font-weight: light;
+    margin: 10px 0px 0px 10px;
+    font-family: "Montserrat";
+}
+
+.hamburger {
+    color: rgb(255, 255, 255) !important;
+    font-size: 2em;
+    margin-top: 1rem !important;
+    margin-right: 1rem;
+    background: transparent !important;
+    border: none;
+    display: none;
+}
+
+@media screen and (max-width: 968px) {
+    .hamburger {
+        position: absolute;
+        top: 0.8rem !important;
+        right: 1% !important;
+        display: block !important;
+    }
+    .nav ul {
+        min-width: 60%;
+        position: absolute;
+        top: 60px;
+        height: fit-content;
+        flex-direction: column;
+        justify-content: space-evenly;
+        transition: 0.5s;
+        text-align: left;
+        font-size: 1.3em;
+        padding-bottom: 50%;
+        background: rgba( 255, 255, 255, 0.8);
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+        backdrop-filter: blur( 13.5px);
+        -webkit-backdrop-filter: blur( 13.5px);
+    }
+    .nav ul li {
+        margin-bottom: 1rem;
+        text-align: left;
+        width: 100%;
+    }
+    .nav ul li a {
+        width: 100%;
+        color: rgb(5, 5, 5);
+        transition: 0.1s;
+        padding-inline-end: 36%;
+    }
+    .nav ul li a i {
+        min-width: 24px;
+    }
+}
+@media (min-width: 780px){
+    .sections {
+        font-size: 1rem;
+    }
+}

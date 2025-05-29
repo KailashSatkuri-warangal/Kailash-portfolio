@@ -1,0 +1,191 @@
+.projects {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 5rem;
+    padding-top: 2rem;
+}
+
+.projects h1,
+.projects h4,
+.projects p {
+    color: white;
+}
+
+.projects_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2rem 0px;
+}
+
+.card {
+    width: 100%;
+    min-height: var(--project-card-height);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 1rem 0px;
+    padding: 5px 10px;
+    /* ******Glass effect to be applied here*********  */
+    background: rgba( 255, 255, 255, 0.35);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+    backdrop-filter: blur( 3px);
+    -webkit-backdrop-filter: blur( 3px);
+}
+
+.card h2 {
+    color: white;
+}
+
+.left {
+    width: 50%;
+    height: var(--project-card-height);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+}
+
+.button_section {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.button_section a {
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 1.05em;
+    min-width: 150px;
+    transition: 0.2s;
+}
+
+.button_section a:first-child {
+    color: white;
+    background-color: transparent;
+    border: 1px solid grey;
+}
+
+.button_section a:first-child:hover {
+    color: rgb(255, 255, 255);
+    background-color: grey;
+    border: 1px solid grey;
+}
+
+.button_section a:last-child {
+    color: black;
+    background-color: white;
+    border: 1px solid grey;
+}
+
+.button_section a:last-child:hover {
+    color: white;
+    background-color: grey;
+    border: 1px solid grey;
+}
+
+.right {
+    width: 50%;
+    height: 100%;
+}
+
+.right img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: -5px !important;
+}
+
+.more_button_container {
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+}
+
+.more_button {
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 1.05em;
+    min-width: 150px;
+    transition: 0.2s;
+    margin: auto;
+    color: white;
+    border: 1px solid white;
+    transition: 0.2s;
+}
+
+.more_button:hover {
+    background-color: white;
+    color: rgb(22, 0, 0);
+}
+
+@media screen and (max-width: 768px) {
+    .projects {
+        padding: 1rem;
+    }
+    .card {
+        flex-direction: column-reverse !important;
+    }
+    .left,
+    .right {
+        width: 100%;
+        align-items: center;
+        text-align: center !important;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .button_section a {
+        min-width: 100px; /* Slightly smaller for small screens */
+        font-size: 0.8em; /* Adjust font size for smaller screens */
+    }
+    .projects h1,
+    .projects h4,
+    .projects p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .projects {
+        padding: 1rem;
+    }
+    .card {
+        flex-direction: column-reverse !important;
+    }
+    .left,
+    .right {
+        width: 100%;
+        align-items: center;
+        text-align: center !important;
+    }
+}
+
+@media screen and (max-width: 1366px) and (min-width: 1024px) {
+    .projects {
+        padding: 1.5rem;
+    }
+    .card {
+        flex-direction: row !important;
+    }
+    .left,
+    .right {
+        width: 45%;
+        text-align: left !important;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .projects h1,
+.projects h4,
+.projects p {
+    font-size: 12px;
+}
+    .projects {
+        padding: 0.5rem; /* Decrease padding on very small screens */
+    }
+}
