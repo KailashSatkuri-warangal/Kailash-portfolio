@@ -21,7 +21,6 @@
   "devDependencies": {
     "eslint": "7.32.0",
     "eslint-config-next": "12.0.4"
-<<<<<<< HEAD
   },
   "version": "1.0.0",
   "main": "index.js",
@@ -37,7 +36,4 @@
   },
   "homepage": "https://github.com/KailashSatkuri-warangal/Kailash-portfolio#readme",
   "description": ""
-=======
-  }
->>>>>>> 2373177724e2a1498c8608c5d26fcc2ec12092b5
 }
