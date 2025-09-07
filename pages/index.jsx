@@ -15,6 +15,7 @@ import Loader from '../components/Loader/Loader'
 import Script from 'next/script'
 import Meta from '../public/Profile/meta.png'
 import Particles from 'react-tsparticles'
+import Footer from '../components/Footer/footer'; 
 const particleOptions = require('../utils/particles.json')
 
 export async function getStaticProps(context) {
@@ -56,6 +57,7 @@ export default function Home({blogs}) {
       <Projects/>
       <Blogs blogs={blogs} />
       <Contact/>
+      <Footer/>
       <Script src="https://kit.fontawesome.com/2c32a0aecc.js" crossOrigin="anonymous"></Script>
     </>:<Loader/>)
 }
