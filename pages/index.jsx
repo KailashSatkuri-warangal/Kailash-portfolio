@@ -17,6 +17,7 @@ import Meta from '../public/Profile/meta.png'
 import Particles from 'react-tsparticles'
 import Footer from '../components/Footer/footer'; 
 const particleOptions = require('../utils/particles.json')
+import AdBanner from '../components/banner/AdBanner';
 
 export async function getStaticProps(context) {
 
@@ -58,6 +59,7 @@ export default function Home({blogs}) {
       <Blogs blogs={blogs} />
       <Contact/>
       <Footer/>
+      <AdBanner />
       <Script src="https://kit.fontawesome.com/2c32a0aecc.js" crossOrigin="anonymous"></Script>
     </>:<Loader/>)
 }
