@@ -1,0 +1,146 @@
+
+.profile {
+    background-color: #232323;
+    padding: 5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.profileContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding: 2rem;
+    background: linear-gradient(145deg, #4a4a4a, #2a2a2a);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.profileContent::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+        transparent,
+        rgba(255, 255, 255, 0.05),
+        transparent 30%
+    );
+    animation: rotate 4s linear infinite;
+}
+
+.profileText {
+    position: relative; /* Add this */
+    z-index: 1;         /* And this */
+}
+
+.profileText h1,
+.profileText h2 {
+    color: #ffffff;
+}
+
+.buttonContainer {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.downloadButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 25px;
+    border-radius: 25px;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    cursor: pointer;
+    background: linear-gradient(145deg, #ff8a00, #e52e71);
+    transition: transform 0.2s ease-out;
+    border: none; /* Ensures anchor tags styled as buttons don't have borders */
+}
+
+.downloadButton:hover {
+    transform: scale(1.05);
+}
+
+.downloadButton:active {
+    transform: scale(0.98);
+}
+
+.previewButton {
+    background: linear-gradient(145deg, #4A00E0, #8E2DE2);
+}
+
+.icon {
+    margin-left: 8px;
+    width: 20px;
+    height: 20px;
+}
+
+.profileImageFrame {
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    width: 320px;
+    height: 320px;
+    z-index: 2;
+}
+
+.profileImageFrame::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+        transparent,
+        rgba(255, 255, 255, 0.1),
+        transparent 30%
+    );
+    animation: rotate-reverse 4s linear infinite;
+}
+
+.profileImage {
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate-reverse {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+@media screen and (max-width: 968px) {
+    .profileContent {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+    }
+}

@@ -1,0 +1,192 @@
+.githubSection {
+	text-align: center;
+	padding: 80px 20px;
+}
+
+.githubTitle {
+	font-size: 2rem;
+	margin-bottom: 30px;
+	color: #00e6e6;
+}
+
+.githubCard {
+	width: 500px;
+	max-width: 95%;
+	margin: 0 auto;
+	perspective: 1200px;
+	cursor: pointer;
+}
+
+.githubCardInner {
+	position: relative;
+	width: 100%;
+	min-height: 500px;
+	transform-style: preserve-3d;
+	transition: transform 0.8s ease-in-out;
+}
+
+.flipped .githubCardInner {
+	transform: rotateY(180deg);
+}
+
+.githubCardFront,
+.githubCardBack {
+	position: absolute;
+	width: 100%;
+	min-height: 500px;
+	backface-visibility: hidden;
+	border-radius: 15px;
+	box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+	background: #111;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+	overflow-y: auto;
+}
+
+.githubCardBack {
+	transform: rotateY(180deg);
+}
+
+.githubAvatar {
+	width: 100px;
+	border-radius: 50%;
+	margin-bottom: 10px;
+}
+
+.githubProfileLink {
+	color: #00e6e6;
+	text-decoration: none;
+	margin: 5px 0;
+}
+
+.githubProfileLink:hover {
+	text-decoration: underline;
+}
+
+.githubInstruction {
+	position: absolute;
+	bottom: 10px;
+	font-size: 0.9rem;
+	color: #bbb;
+	background: rgba(0,0,0,0.4);
+	padding: 5px 10px;
+	border-radius: 10px;
+}
+
+.topRepos {
+	list-style: none;
+	padding: 0;
+	width: 100%;
+}
+
+.repoBtn {
+	color: #f8e15e;
+	text-decoration: none;
+	margin-right: 10px;
+}
+
+.repoBtn:hover {
+	color: #ffcc00;
+}
+
+.starBtn {
+	background: #00e6e6;
+	border: none;
+	padding: 3px 6px;
+	border-radius: 5px;
+	color: #111;
+	font-size: 0.85rem;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+.starBtn:hover {
+	background: #00baba;
+}
+
+.showMoreBtn {
+	margin-top: 10px;
+	background: #ffcc00;
+	color: #111;
+	padding: 6px 12px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.showMoreBtn:hover {
+	background: #ffc869;
+}
+/* Modal styles */
+.modalOverlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.8);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+}
+
+.modalContent {
+	position: relative; /* make relative for absolute close button */
+	background: #111;
+	padding: 20px;
+	border-radius: 10px;
+	width: 90%;
+	max-width: 800px;
+	max-height: 80%;
+	overflow-y: auto;
+}
+
+.closeModalBtn {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	background: #ff4c4c;
+	color: #fff;
+	border: none;
+	padding: 6px 12px;
+	border-radius: 50%;
+	font-weight: bold;
+	cursor: pointer;
+	font-size: 1rem;
+	line-height: 1;
+	transition: all 0.2s ease;
+}
+
+.closeModalBtn:hover {
+	background: #ff0000;
+}
+/* Modal grid layout */
+.repoGrid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+	gap: 15px;
+	margin-top: 40px; /* space below close button */
+}
+
+.repoCard {
+	background: #222;
+	padding: 12px;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	word-break: break-word; /* ensures long repo names wrap */
+	text-align: center;
+}
+
+.repoLink {
+	color: #f8e15e;
+	text-decoration: none;
+	font-weight: 500;
+	margin-bottom: 5px;
+	font-size: 0.9rem;
+}

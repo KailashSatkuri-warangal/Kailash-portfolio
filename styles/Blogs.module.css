@@ -1,0 +1,165 @@
+.blogs {
+	padding: 4rem 2rem;
+	background-color: #1a1a1a;
+	text-align: center;
+	color: white;
+}
+
+.blogs h1 {
+	font-size: 2.5rem;
+	margin-bottom: 1rem;
+}
+
+.blogs p {
+	font-size: 1.1rem;
+	margin-bottom: 2rem;
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	color: #c5c3c3;
+}
+
+.blogs a {
+	color: #ffd700;
+	text-decoration: none;
+	transition: color 0.3s;
+}
+
+.blogs a:hover {
+	color: #daa520;
+}
+
+.blogs_section {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2rem;
+	justify-items: center;
+	max-width: 1200px;
+	margin: 2rem auto 0;
+}
+
+/* CARD STYLES */
+.card_container {
+	perspective: 1000px;
+	width: 100%;
+	max-width: 300px;
+	cursor: pointer;
+}
+
+.card {
+	width: 100%;
+	height: 350px;
+	position: relative;
+	transform-style: preserve-3d;
+	transition: transform 0.8s;
+}
+
+.card_container:hover .card {
+	transform: rotateY(180deg);
+}
+
+.card_front,
+.card_back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	border-radius: 10px;
+	overflow: hidden;
+	background-color: #2a2a2a;
+	border: 1px solid #444;
+	display: flex;
+	flex-direction: column;
+}
+
+.card_front {
+	justify-content: flex-start;
+}
+
+.image_container {
+	width: 100%;
+	height: 70%;
+	background-size: cover;
+	background-position: center;
+}
+
+.card_name_container {
+	padding: 1rem;
+	text-align: center;
+	font-size: 1.1rem;
+	height: 30%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.card_name_container h3 {
+	margin: 0;
+}
+
+.card_back {
+	transform: rotateY(180deg);
+	justify-content: center;
+	align-items: center;
+	padding: 1rem;
+	text-align: center;
+	overflow-y: auto;
+}
+
+.text_container {
+	padding: 1rem;
+	text-align: center;
+}
+
+.text_container h3 {
+	font-size: 1.2rem;
+	margin-bottom: 1rem;
+}
+
+.text_container p {
+	font-size: 1rem;
+	color: #c5c3c3;
+	margin-bottom: 0.5rem;
+}
+
+.read_more {
+	margin-top: 1rem;
+	font-weight: bold;
+	color: #ffd700;
+	font-size: 1rem;
+	text-decoration: none;
+}
+
+.read_more:hover {
+	color: #daa520;
+}
+
+@media screen and (max-width: 768px) {
+	.blogs {
+		padding: 2rem 1rem;
+	}
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+	.blogs {
+		padding: 2rem 1rem;
+	}
+
+	.blogs h1 {
+		font-size: 2rem;
+	}
+
+	.blogs p {
+		font-size: 1rem;
+	}
+
+	.card_container {
+		max-width: 100%;
+	}
+
+	.image_container {
+		min-height: 120px;
+	}
+}
+

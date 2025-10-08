@@ -1,0 +1,40 @@
+.page_container {
+    background-color: #1f1f1f;
+    color: white;
+    min-height: 100vh;
+}
+
+.container {
+    padding: 8rem 2rem 4rem; /* Adjusted padding */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #ffcc00;
+}
+
+.container h2 {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #ffcc00;
+}
+
+.container p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.container a {
+    color: #ffcc00;
+    text-decoration: underline;
+}
+
+.container a:hover {
+    color: #ffd700;
+}

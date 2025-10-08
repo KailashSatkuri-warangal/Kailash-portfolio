@@ -1,0 +1,42 @@
+{
+  "name": "portfolio",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.1.0",
+    "@vercel/analytics": "^0.1.11",
+    "next": "^12.0.8",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-icons": "^4.12.0",
+    "react-tsparticles": "^1.37.3",
+    "react-vertical-timeline-component": "^3.5.2",
+    "swr": "^1.0.1",
+    "three": "^0.135.0",
+    "tsparticles": "^1.37.3",
+    "typed.js": "^2.0.12"
+  },
+  "devDependencies": {
+    "eslint": "7.32.0",
+    "eslint-config-next": "12.0.4"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KailashSatkuri-warangal/Kailash-portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KailashSatkuri-warangal/Kailash-portfolio/issues"
+  },
+  "homepage": "https://github.com/KailashSatkuri-warangal/Kailash-portfolio#readme",
+  "description": ""
+}
