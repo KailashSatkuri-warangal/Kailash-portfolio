@@ -97,7 +97,7 @@ This portfolio is **auto-deployed** on **Vercel** whenever new commits are pushe
 
 **Satkuri Kailash**  
 💼 Software Devloper | AI/ML Developer  
-📧 satkuri.kailash@gmail.com  
+📧 satkurikailash@gmail.com  
 🌐 [LinkedIn](https://linkedin.com/in/satkuri-kailash) | [GitHub](https://github.com/KailashSatkuri-warangal)
 
 ---
