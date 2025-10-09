@@ -74,7 +74,7 @@ export default function Home({ blogs }) {
         <Projects />
         <AdBanner />
         <Blogs blogs={blogs} />
-        <ClientComponent />
+        <ClientComponent /> {/* Hypertune flags used here */}
         <Footer />
       </div>
     </>
