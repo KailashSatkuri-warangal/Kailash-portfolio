@@ -6,8 +6,6 @@ import { useHypertune } from '@/generated/hypertune.react'
 
 export default function ClientComponent() {
 	const hypertune = useHypertune()
-
-	// Replace 'showNewSection' with your actual flag key
 	const showNewSection = hypertune.showNewSection({ fallback: false })
 
 	return (
