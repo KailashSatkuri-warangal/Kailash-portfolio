@@ -4,7 +4,7 @@ import Particles from '../components/Particles/Particles';
 import particlesConfig from '../utils/particles.json';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import Head from 'next/head';
-import AppHypertuneProvider from '../components/client/HypertuneProvider'; // Client wrapper
+import AppHypertuneProvider from '../components/client/HypertuneProvider';
 
 function MyApp({ Component, pageProps }) {
 	return (
