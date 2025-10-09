@@ -8,15 +8,19 @@ export default function ClientComponent() {
 
 	useEffect(() => {
 		async function fetchFlags() {
-			const hypertuneFlags = await getHypertune();
-			setFlags(hypertuneFlags);
+			const hypertuneData = await getHypertune();
+			setFlags(hypertuneData);
 		}
 		fetchFlags();
 	}, []);
 
-	if (!flags) return <div>Loading flags...</div>;
+	if (!flags) return <div>Waiting for flag evaluation...</div>;
 
-	const showNewSection = flags.showNewSection;
-
-	return <div>Flag: {String(showNewSection)}</div>;
+	return (
+		<div>
+			🎉 New Section Enabled! <br />
+			Flag: {String(flags.showNewSection)} <br />
+			User: {flags.context.user.name} ({flags.context.user.email})
+		</div>
+	);
 }
