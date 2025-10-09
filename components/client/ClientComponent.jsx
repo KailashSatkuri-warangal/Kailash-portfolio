@@ -1,10 +1,22 @@
 'use client';
-import { useContext } from 'react';
-import { HypertuneContext } from './HypertuneProvider';
+
+import { useState, useEffect } from 'react';
+import getHypertune from '../../lib/getHypertune.client';
 
 export default function ClientComponent() {
-  const flags = useContext(HypertuneContext);
-  if (!flags) return <div>Loading flags...</div>;
+	const [flags, setFlags] = useState(null);
 
-  return <div>Show New Section: {String(flags.showNewSection)}</div>;
+	useEffect(() => {
+		async function fetchFlags() {
+			const hypertuneFlags = await getHypertune();
+			setFlags(hypertuneFlags);
+		}
+		fetchFlags();
+	}, []);
+
+	if (!flags) return <div>Loading flags...</div>;
+
+	const showNewSection = flags.showNewSection;
+
+	return <div>Flag: {String(showNewSection)}</div>;
 }
