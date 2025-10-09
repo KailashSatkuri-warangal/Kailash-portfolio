@@ -5,7 +5,7 @@ import particlesConfig from '../utils/particles.json';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import Head from "next/head";
 import { useEffect, useState } from "react";
-import getHypertune from '../lib/getHypertune.client'; // client-side helper
+import getHypertune from '../lib/getHypertune'; // client-side helper
 
 function MyApp({ Component, pageProps }) {
   const [flags, setFlags] = useState(null);
