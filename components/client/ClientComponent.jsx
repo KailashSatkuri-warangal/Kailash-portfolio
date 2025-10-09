@@ -2,14 +2,12 @@
 import React from 'react'
 
 export default function ClientComponent({ flags }) {
-  if (!flags) return <div>Loading flags...</div>
-
-  const showNewSection = flags.showNewSection || false
+  if (!flags) return <div>Loading flags...</div>;
 
   return (
     <div>
-      <p>Flag value: {String(showNewSection)}</p>
-      {showNewSection && <p>🎉 New Section Enabled!</p>}
+      <p>showNewSection: {String(flags.showNewSection)}</p>
+      {flags.showNewSection && <p>🎉 New Section Enabled!</p>}
     </div>
-  )
+  );
 }

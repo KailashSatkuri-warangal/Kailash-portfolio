@@ -1,30 +1,26 @@
-import '../styles/globals.css'
-import CookieBanner from '../components/CookieBanner/CookieBanner'
-import Particles from '../components/Particles/Particles'
-import particlesConfig from '../utils/particles.json'
-import '@fortawesome/fontawesome-free/css/all.min.css'
-import Head from 'next/head'
-import { useEffect, useState } from 'react'
-import getHypertune from '../lib/getHypertune' // client-side helper
+import '../styles/globals.css';
+import CookieBanner from '../components/CookieBanner/CookieBanner';
+import Particles from '../components/Particles/Particles';
+import particlesConfig from '../utils/particles.json';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import Head from "next/head";
+import { useEffect, useState } from "react";
+import getHypertune from '../lib/getHypertune.client'; // client-side helper
 
 function MyApp({ Component, pageProps }) {
-  const [flags, setFlags] = useState(null)
+  const [flags, setFlags] = useState(null);
 
   useEffect(() => {
     async function initHypertune() {
-      console.log('Hypertune Connected ✅')
-      console.log('Config Key:', process.env.EXPERIMENTATION_EXPERIMENTATION_CONFIG_ITEM_KEY)
-      console.log('Token:', process.env.EXPERIMENTATION_NEXT_PUBLIC_HYPERTUNE_TOKEN)
-
-      const hypertuneFlags = await getHypertune()
-      setFlags(hypertuneFlags)
+      const hypertuneFlags = await getHypertune();
+      console.log('Hypertune flags:', hypertuneFlags);
+      setFlags(hypertuneFlags);
     }
 
-    initHypertune()
-  }, [])
+    initHypertune();
+  }, []);
 
-  // Optional: show loading until flags are fetched
-  if (!flags) return <div>Loading portfolio...</div>
+  if (!flags) return <div>Loading portfolio...</div>; // wait for flags
 
   return (
     <>
@@ -40,7 +36,7 @@ function MyApp({ Component, pageProps }) {
       <Component {...pageProps} hypertuneFlags={flags} />
       <CookieBanner />
     </>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;
