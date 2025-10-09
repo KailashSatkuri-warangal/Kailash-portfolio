@@ -5,7 +5,8 @@ import particlesConfig from '../utils/particles.json';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import Head from "next/head";
 import { useEffect, useState } from "react";
-import getHypertune from '../lib/getHypertune.client'; // must be client JS
+import getHypertune from '../lib/getHypertune.client'; // client-side JS
+import { HypertuneProvider } from '../components/client/HypertuneProvider.jsx'; // simple wrapper
 
 function MyApp({ Component, pageProps }) {
   const [flags, setFlags] = useState(null);
@@ -27,7 +28,7 @@ function MyApp({ Component, pageProps }) {
   if (!flags) return <div>Loading portfolio...</div>;
 
   return (
-    <>
+    <HypertuneProvider flags={flags}>
       <Head>
         <script
           async
@@ -39,7 +40,7 @@ function MyApp({ Component, pageProps }) {
       <Particles options={particlesConfig} />
       <Component {...pageProps} hypertuneFlags={flags} />
       <CookieBanner />
-    </>
+    </HypertuneProvider>
   );
 }
 

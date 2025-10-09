@@ -1,4 +1,9 @@
-export default function ClientComponent({ flags }) {
+import { useContext } from 'react';
+import { HypertuneContext } from './HypertuneProvider';
+
+export default function ClientComponent() {
+  const flags = useContext(HypertuneContext);
+
   if (!flags) return null;
 
   return (
