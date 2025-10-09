@@ -13,7 +13,7 @@ import Footer from "../components/Footer/footer";
 import Loader from "../components/Loader/Loader";
 import AdBanner from "../components/banner/AdBanner";
 import Meta from "../public/Profile/meta.png";
-
+import ClientComponent from '../components/client/ClientComponent'
 const Particles = dynamic(() => import('react-tsparticles'), {
 	ssr: false,
 });
@@ -43,6 +43,7 @@ export default function Home({ blogs }) {
 
 	return (
 		<>
+			<ClientComponent />
 			{loading && <Loader />}
 			<div style={{ visibility: loading ? 'hidden' : 'visible' }}>
 				<Head>
