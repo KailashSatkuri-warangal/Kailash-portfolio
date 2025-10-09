@@ -72,9 +72,6 @@ npm install
 # 4. Run the development server
 npm run dev
 ```
-
-Then open **http://localhost:3000** in your browser.
-
 ---
 
 ## 🔁 Continuous Integration
