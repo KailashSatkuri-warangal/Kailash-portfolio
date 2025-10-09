@@ -5,27 +5,26 @@ import particlesConfig from '../utils/particles.json';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import Head from "next/head";
 import { useEffect, useState } from "react";
-import getHypertune from '../lib/getHypertune.client';
+import getHypertune from '../lib/getHypertune.client'; // must be client JS
 
 function MyApp({ Component, pageProps }) {
   const [flags, setFlags] = useState(null);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    async function initHypertune() {
+    async function init() {
       try {
         const hypertuneFlags = await getHypertune();
         setFlags(hypertuneFlags);
       } catch (err) {
-        console.error("Hypertune initialization failed:", err);
-      } finally {
-        setLoading(false);
+        console.error("Hypertune init failed:", err);
+        setFlags({}); // fallback to empty
       }
     }
-    initHypertune();
+    init();
   }, []);
 
-  if (loading) return <div>Loading portfolio...</div>;
+  // Prevent rendering until flags are ready
+  if (!flags) return <div>Loading portfolio...</div>;
 
   return (
     <>
@@ -34,7 +33,7 @@ function MyApp({ Component, pageProps }) {
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9872384661755732"
           crossOrigin="anonymous"
-        ></script>
+        />
       </Head>
 
       <Particles options={particlesConfig} />
