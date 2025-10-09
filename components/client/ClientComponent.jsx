@@ -1,24 +1,15 @@
-// components/ClientComponent.jsx
 'use client'
-
 import React from 'react'
-import { useHypertune } from '@/generated/hypertune.react'
 
-export default function ClientComponent() {
-	const hypertune = useHypertune()
-	const showNewSection = hypertune.showNewSection({ fallback: false })
+export default function ClientComponent({ flags }) {
+  if (!flags) return <div>Loading flags...</div>
 
-	return (
-		<div>
-			<h2>Feature Flag Demo</h2>
-			<p>Flag value: {String(showNewSection)}</p>
+  const showNewSection = flags.showNewSection || false
 
-			{showNewSection && (
-				<div className="new-section">
-					<h3>🚀 New Section Activated!</h3>
-					<p>This section appears because the Hypertune flag is ON.</p>
-				</div>
-			)}
-		</div>
-	)
+  return (
+    <div>
+      <p>Flag value: {String(showNewSection)}</p>
+      {showNewSection && <p>🎉 New Section Enabled!</p>}
+    </div>
+  )
 }

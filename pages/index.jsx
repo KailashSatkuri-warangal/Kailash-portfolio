@@ -44,7 +44,7 @@ export default function Home({ blogs }) {
 
 	return (
 		<>
-			<ClientComponent />
+			<ClientComponent flags={hypertuneFlags} />
 			{loading && <Loader />}
 			<div style={{ visibility: loading ? 'hidden' : 'visible' }}>
 				<Head>
