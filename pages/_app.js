@@ -5,22 +5,27 @@ import particlesConfig from '../utils/particles.json';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import Head from "next/head";
 import { useEffect, useState } from "react";
-import getHypertune from '../lib/getHypertune'; // client-side helper
+import getHypertune from '../lib/getHypertune.client';
 
 function MyApp({ Component, pageProps }) {
   const [flags, setFlags] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function initHypertune() {
-      const hypertuneFlags = await getHypertune();
-      console.log('Hypertune flags:', hypertuneFlags);
-      setFlags(hypertuneFlags);
+      try {
+        const hypertuneFlags = await getHypertune();
+        setFlags(hypertuneFlags);
+      } catch (err) {
+        console.error("Hypertune initialization failed:", err);
+      } finally {
+        setLoading(false);
+      }
     }
-
     initHypertune();
   }, []);
 
-  if (!flags) return <div>Loading portfolio...</div>; // wait for flags
+  if (loading) return <div>Loading portfolio...</div>;
 
   return (
     <>
