@@ -9,13 +9,6 @@ import { useEffect } from 'react'
 function MyApp({ Component, pageProps }) {
 	const router = useRouter()
 
-	// Register Service Worker for PWA
-	useEffect(() => {
-		if ('serviceWorker' in navigator) {
-			navigator.serviceWorker.register('/sw.js').catch(() => {});
-		}
-	}, []);
-
 	return (
 		<>
 			<Head>

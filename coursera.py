@@ -11,6 +11,7 @@ html = requests.get(PROFILE_URL, headers=headers).text
 
 soup = BeautifulSoup(html, "html.parser")
 
+
 links = soup.find_all("a")
 
 with open("coursera_certificates.txt", "w", encoding="utf-8") as f:

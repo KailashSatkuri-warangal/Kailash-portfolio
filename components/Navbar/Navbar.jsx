@@ -9,25 +9,9 @@ function Navbar() {
 	const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 	const [isScrolled, setScrolled] = useState(false);
 
-	async function linkClicked(e) {
-		e.preventDefault();
-		const url = e.currentTarget.getAttribute('href');
+	const handleNavClick = () => {
 		setMobileMenuOpen(false);
-
-		if (router.pathname !== '/') {
-			await router.push('/' + url);
-			return;
-		}
-
-		try {
-			await smoothScroll(url);
-		} catch (err) {
-			console.warn(err.message);
-			const justHash = url.split('#')[1];
-			const element = document.getElementById(justHash);
-			if (element) element.scrollIntoView({ behavior: 'smooth' });
-		}
-	}
+	};
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -36,18 +20,6 @@ function Navbar() {
 		window.addEventListener('scroll', handleScroll);
 		return () => window.removeEventListener('scroll', handleScroll);
 	}, []);
-
-	useEffect(() => {
-		if (router.asPath.includes('#')) {
-			const id = router.asPath.split('#')[1];
-			const element = document.getElementById(id);
-			if (element) {
-				setTimeout(() => {
-					element.scrollIntoView({ behavior: 'smooth' });
-				}, 100);
-			}
-		}
-	}, [router.asPath]);
 
 	useEffect(() => {
 		setMobileMenuOpen(false);
@@ -74,18 +46,19 @@ function Navbar() {
 
 				<ul className={`${styles.navList} ${isMobileMenuOpen ? styles.active : ''}`}>
 					{router.pathname !== '/' && (
-						<li><Link href="/"><i className="fas fa-home hidden_in_desktop"></i> Home</Link></li>
+						<li><Link href="/" onClick={handleNavClick}><i className="fas fa-home hidden_in_desktop"></i> Home</Link></li>
 					)}
 					
 					{router.pathname === '/' && (
 						<>
-							<li><a onClick={linkClicked} href="#profile"><i className="fas fa-home hidden_in_desktop"></i> Home</a></li>
-							<li><a onClick={linkClicked} href="#about"><i className="fas fa-info-circle hidden_in_desktop"></i> About</a></li>
-							<li><a onClick={linkClicked} href="#skills"><i className="fas fa-code hidden_in_desktop"></i> Skills</a></li>
-							<li><a onClick={linkClicked} href="#experience"><i className="fas fa-briefcase hidden_in_desktop"></i> Experience</a></li>
-							<li><a onClick={linkClicked} href="#projects"><i className="fas fa-cubes hidden_in_desktop"></i> Projects</a></li>
-							<li><a onClick={linkClicked} href="#blogs"><i className="fas fa-feather-alt hidden_in_desktop"></i> Blogs</a></li>
-							<li><a onClick={linkClicked} href="#contact"><i className="fas fa-envelope hidden_in_desktop"></i> Contact</a></li>
+							<li><a onClick={handleNavClick} href="#profile"><i className="fas fa-home hidden_in_desktop"></i> Home</a></li>
+							<li><a onClick={handleNavClick} href="#about"><i className="fas fa-info-circle hidden_in_desktop"></i> About</a></li>
+							<li><a onClick={handleNavClick} href="#skills"><i className="fas fa-code hidden_in_desktop"></i> Skills</a></li>
+							<li><a onClick={handleNavClick} href="#experience"><i className="fas fa-briefcase hidden_in_desktop"></i> Experience</a></li>
+							<li><a onClick={handleNavClick} href="#projects"><i className="fas fa-cubes hidden_in_desktop"></i> Projects</a></li>
+							<li><a onClick={handleNavClick} href="#certifications"><i className="fas fa-certificate hidden_in_desktop"></i> Certifications</a></li>
+							<li><a onClick={handleNavClick} href="#blogs"><i className="fas fa-feather-alt hidden_in_desktop"></i> Blogs</a></li>
+							<li><a onClick={handleNavClick} href="#contact"><i className="fas fa-envelope hidden_in_desktop"></i> Contact</a></li>
 						</>
 					)}
 
