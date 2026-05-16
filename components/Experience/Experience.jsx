@@ -8,7 +8,7 @@ import 'react-vertical-timeline-component/style.min.css';
 function Experience() {
 
     return (
-        <div className={styles.experience} name="experience" id="experience">
+        <div className={`${styles.experience} glass-panel section-spacing`} name="experience" id="experience">
                 <h1>Work Experience</h1>
                 <p>These are the organizations I have had the privilege of working with.</p>
                 <div className={styles.experience_cards_section}>
@@ -17,8 +17,8 @@ function Experience() {
                         <VerticalTimelineElement
                             key={index}
                             className="vertical-timeline-element--work"
-                            contentStyle={{ background: job.color, color: '#fff', boxShadow: '0px 0px 0px rgba(0,0,0,0)'}}
-                            contentArrowStyle={{ borderRight: `7px solid rgba(0,0,0,0)` }}
+                            contentStyle={{ background: 'var(--glass-bg)', backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)', border: '1px solid var(--glass-border)', color: '#fff', boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.37)'}}
+                            contentArrowStyle={{ borderRight: `7px solid var(--glass-border)` }}
                             date={`${job.from} - ${job.to}`}
                             iconStyle={{ background: 'rgba(255,255,255)', color: '#fff' }}
                             icon={<Icon url={job.logo} className={styles.rounded} />}

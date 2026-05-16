@@ -5,7 +5,7 @@ import styles from '../../styles/Projects.module.css';
 import { ProjectsList } from '../../data/Projects';
 
 function Projects() {
-	const [filter, setFilter] = useState('ml');
+	const [filter, setFilter] = useState('fullstack');
 	const [selectedProject, setSelectedProject] = useState(null);
 
 	const handleFilterChange = (newFilter) => setFilter(newFilter);
@@ -17,20 +17,20 @@ function Projects() {
 	);
 
 	return (
-		<div className={styles.projects} id="projects">
+		<div className={`${styles.projects} glass-panel section-spacing`} id="projects">
 			<h1>Projects</h1>
 			<p>
 				These are the projects I&apos;ve worked on, both independently and as part of my university work, over the past few months.
 			</p>
 
 			<div className={styles.filter_buttons}>
-				{['all', 'frontend', 'ml', 'android'].map((type) => (
+				{['all', 'fullstack', 'ml', 'frontend', 'android'].map((type) => (
 					<button
 						key={type}
 						onClick={() => handleFilterChange(type)}
 						className={filter === type ? styles.active : ''}
 					>
-						{type === 'ml' ? 'ML' : type.charAt(0).toUpperCase() + type.slice(1)}
+						{type === 'ml' ? 'ML / AI' : type === 'fullstack' ? 'Full Stack' : type.charAt(0).toUpperCase() + type.slice(1)}
 					</button>
 				))}
 			</div>
@@ -52,15 +52,14 @@ function Projects() {
 			</div>
 
 			<div className={styles.more_button_container}>
-				<a
-					href="https://github.com/KailashSatkuri-warangal"
-					title="Kailash"
-					target="_blank"
-					rel="noreferrer"
-					className={styles.more_button}
-				>
-					See All Projects
-				</a>
+				{filter !== 'all' && (
+					<button
+						onClick={() => handleFilterChange('all')}
+						className={styles.more_button}
+					>
+						See All Projects
+					</button>
+				)}
 			</div>
 
 			{selectedProject && <ProjectModal project={selectedProject} onClose={handleCloseModal} />}

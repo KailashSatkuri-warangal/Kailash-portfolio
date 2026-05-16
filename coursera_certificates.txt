@@ -1,0 +1,15 @@
+Certificate Title | Organization | Certificate Link
+
+Google AI Certificate | Coursera | https://www.coursera.org/professional-certificates/google-ai
+Google Cybersecurity Certificate | Coursera | https://www.coursera.org/professional-certificates/google-cybersecurity
+Google Data Analytics Certificate | Coursera | https://www.coursera.org/professional-certificates/google-data-analytics
+Google IT Support Certificate | Coursera | https://www.coursera.org/professional-certificates/google-it-support
+Google Project Management Certificate | Coursera | https://www.coursera.org/professional-certificates/google-project-management
+Google UX Design Certificate | Coursera | https://www.coursera.org/professional-certificates/google-ux-design
+IBM AI Engineering Certificate | Coursera | https://www.coursera.org/professional-certificates/ai-engineer
+IBM AI Product Manager Certificate | Coursera | https://www.coursera.org/professional-certificates/ibm-ai-product-manager
+IBM Data Science Certificate | Coursera | https://www.coursera.org/professional-certificates/ibm-data-science
+Intuit Academy Bookkeeping Certificate | Coursera | https://www.coursera.org/professional-certificates/intuit-bookkeeping
+AI For Everyone Course | Coursera | https://www.coursera.org/learn/ai-for-everyone
+Financial Markets Course | Coursera | https://www.coursera.org/learn/financial-markets-global
+Prompt Engineering for ChatGPT Course | Coursera | https://www.coursera.org/learn/prompt-engineering

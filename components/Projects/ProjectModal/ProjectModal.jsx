@@ -41,7 +41,6 @@ const ProjectModal = ({ project, onClose }) => {
 									<span key={i} className={i < project.rating ? styles.filled_star : styles.empty_star}>&#9733;</span>
 								))}
 							</div>
-							<span className={styles.likes}>{project.likes} likes</span>
 						</div>
 					</div>
 				</div>

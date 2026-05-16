@@ -34,7 +34,7 @@ const CookieBanner = () => {
     }}>
       <p style={{ margin: '0 0 1rem 0' }}>
         We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies. Learn more in our{' '}
-        <Link href="/privacy"><a style={{ color: '#4CAF50', textDecoration: 'underline' }}>Privacy Policy</a></Link>.
+        <Link href="/privacy" style={{ color: '#4CAF50', textDecoration: 'underline' }}>Privacy Policy</Link>.
       </p>
       <button onClick={acceptCookies} style={{
         backgroundColor: '#4CAF50',

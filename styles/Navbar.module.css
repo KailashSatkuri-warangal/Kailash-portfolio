@@ -2,40 +2,55 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 1rem 2rem;
+	padding: 0.8rem 2rem;
 	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
+	top: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 90%;
+	max-width: 1200px;
 	z-index: 1000;
-	background-color: transparent;
-	box-shadow: none;
-	transition: background-color 0.4s ease-out;
+	background: var(--glass-bg);
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
+	border: 1px solid var(--glass-border);
+	border-radius: 50px;
+	box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+	transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .nav.scrolled {
-	background-color: #1e1e1e;
-	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+	width: 80%;
+	background: rgba(255, 255, 255, 0.05);
+	border-color: rgba(255, 255, 255, 0.15);
+	box-shadow: 0 8px 32px 0 rgba(0, 240, 255, 0.1);
+	top: 15px;
 }
 
 .nav p {
 	color: white;
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-size: 2rem;
-	font-weight: 500;
+	font-size: 1.2rem;
+	font-weight: 600;
+	white-space: nowrap;
 }
 
 .navList {
 	list-style: none;
 	display: flex;
-	gap: 2rem;
+	gap: 1.5rem;
 	margin: 0;
+	align-items: center;
+	padding: 0;
+}
+
+.navList li {
+	white-space: nowrap;
 }
 
 .navList a {
-	color: white;
+	color: rgba(255, 255, 255, 0.7);
 	text-decoration: none;
-	font-size: 1.1rem;
+	font-size: 0.88rem;
 	transition: color 0.3s ease;
 	position: relative;
 }
@@ -47,14 +62,14 @@
 	height: 2px;
 	bottom: -4px;
 	left: 0;
-	background-color: #ffcc00;
+	background-color: rgba(0, 240, 255, 0.6);
 	transform: scaleX(0);
 	transform-origin: bottom right;
 	transition: transform 0.3s ease-out;
 }
 
 .navList a:hover {
-	color: #ffcc00;
+	color: rgba(0, 240, 255, 0.9);
 }
 .navList a:hover::after {
 	transform: scaleX(1);
@@ -62,66 +77,92 @@
 }
 
 .sponsorButton {
-	background-color: #ff69b4;
-	padding: 0.5rem 1rem;
-	border-radius: 5px;
+	background: rgba(255, 105, 180, 0.15);
+	border: 1px solid rgba(255, 105, 180, 0.3);
+	padding: 0.4rem 1rem;
+	border-radius: 100px;
 	color: white !important;
-	transition: background-color 0.3s ease;
+	font-size: 0.85rem;
+	transition: all 0.3s ease;
 }
 .sponsorButton:hover {
-	background-color: #d14791;
+	background: rgba(255, 105, 180, 0.25);
+	border-color: rgba(255, 105, 180, 0.5);
 }
 
-/* Mobile Styles */
+/* Mobile */
 .hamburger {
 	display: none;
 	background: none;
 	border: none;
 	color: white;
-	font-size: 1.8rem;
+	font-size: 1.5rem;
 	cursor: pointer;
 	z-index: 1100;
 }
 .hamburger i {
-	transition: transform 0.3s ease, opacity 0.3s ease;
+	transition: transform 0.3s ease;
 }
 .hamburger.active i {
 	transform: rotate(90deg);
 }
 
 @media screen and (max-width: 968px) {
+	.nav {
+		width: 94%;
+		padding: 0.7rem 1.2rem;
+		top: 10px;
+		border-radius: 16px;
+	}
+
+	.nav.scrolled {
+		width: 94%;
+		top: 10px;
+	}
+
 	.navList {
 		flex-direction: column;
 		position: fixed;
-		top: 60px;
+		top: 0;
 		right: 0;
 		width: 70%;
+		max-width: 280px;
 		height: 100vh;
-		background-color: #1e1e1e;
-		padding: 2rem 0;
+		background: rgba(10, 10, 15, 0.98);
+		backdrop-filter: blur(20px);
+		-webkit-backdrop-filter: blur(20px);
+		padding: 5rem 2rem 2rem;
 		transform: translateX(100%);
 		transition: transform 0.3s ease-in-out;
+		gap: 0.5rem;
+		z-index: 1050;
+		border-left: 1px solid rgba(255, 255, 255, 0.06);
 	}
 	.navList.active {
 		transform: translateX(0);
 	}
-	.hamburger {
+	.navList a {
+		font-size: 1rem;
+		padding: 0.6rem 0;
 		display: block;
 	}
 	.navList a::after {
 		display: none;
 	}
+	.hamburger {
+		display: block;
+	}
 }
 
-/* Overlay behind mobile menu */
+/* Overlay */
 .overlay {
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: rgba(0, 0, 0, 0.5);
-	z-index: 900;
+	background: rgba(0, 0, 0, 0.6);
+	z-index: 1040;
 	opacity: 0;
 	transition: opacity 0.3s ease;
 	pointer-events: none;
@@ -129,15 +170,4 @@
 .overlay.active {
 	opacity: 1;
 	pointer-events: all;
-}
-
-/* Icon visibility */
-.hidden_in_desktop {
-	display: none;
-}
-@media screen and (max-width: 968px) {
-	.hidden_in_desktop {
-		display: inline-block;
-		margin-right: 10px;
-	}
 }

@@ -3,7 +3,7 @@ import Card from './Card/Card';
 
 function Blogs({ blogs }) {
 	return (
-		<div className={styles.blogs} id="blogs">
+		<div className={`${styles.blogs} glass-panel section-spacing`} id="blogs">
 			<h1>My Blogs</h1>
 			<p>
 				I feel so good writing technology related articles. You can find all of my blogs at{' '}

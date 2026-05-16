@@ -73,17 +73,19 @@ function Navbar() {
 				</button>
 
 				<ul className={`${styles.navList} ${isMobileMenuOpen ? styles.active : ''}`}>
-					<li><Link href="/"><a><i className="fas fa-home hidden_in_desktop"></i> Home</a></Link></li>
-					<li><Link href="/about"><a><i className="fas fa-info-circle hidden_in_desktop"></i> About</a></Link></li>
-					<li><Link href="/contact"><a><i className="fas fa-envelope hidden_in_desktop"></i> Contact</a></Link></li>
-
+					{router.pathname !== '/' && (
+						<li><Link href="/"><i className="fas fa-home hidden_in_desktop"></i> Home</Link></li>
+					)}
+					
 					{router.pathname === '/' && (
 						<>
-							<li><a onClick={linkClicked} href="#profile"><i className="fas fa-user-circle hidden_in_desktop"></i> Profile</a></li>
+							<li><a onClick={linkClicked} href="#profile"><i className="fas fa-home hidden_in_desktop"></i> Home</a></li>
+							<li><a onClick={linkClicked} href="#about"><i className="fas fa-info-circle hidden_in_desktop"></i> About</a></li>
 							<li><a onClick={linkClicked} href="#skills"><i className="fas fa-code hidden_in_desktop"></i> Skills</a></li>
 							<li><a onClick={linkClicked} href="#experience"><i className="fas fa-briefcase hidden_in_desktop"></i> Experience</a></li>
 							<li><a onClick={linkClicked} href="#projects"><i className="fas fa-cubes hidden_in_desktop"></i> Projects</a></li>
 							<li><a onClick={linkClicked} href="#blogs"><i className="fas fa-feather-alt hidden_in_desktop"></i> Blogs</a></li>
+							<li><a onClick={linkClicked} href="#contact"><i className="fas fa-envelope hidden_in_desktop"></i> Contact</a></li>
 						</>
 					)}
 

@@ -14,7 +14,7 @@ function Skills() {
     </div>
 
     return (
-        <div className={styles.skills} id="skills">
+        <div className={`${styles.skills} glass-panel section-spacing`} id="skills">
             <div className={styles.skillset_content}>
                 <h1>Skillset</h1>
                 <p> I love for acquiring new technologies has made me to explore a number of fields and acquire relevant skill in developing robust and efficient solutions.

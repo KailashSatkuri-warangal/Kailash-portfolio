@@ -1,36 +1,34 @@
 import '../styles/globals.css'
 import CookieBanner from '../components/CookieBanner/CookieBanner'
-import Particles from '../components/Particles/Particles'
-import particlesConfig from '../utils/particles.json'
 import '@fortawesome/fontawesome-free/css/all.min.css'
 import Head from 'next/head'
-import AppHypertuneProvider from '../components/client/HypertuneProvider'
 import { useRouter } from 'next/router'
+import { Analytics } from '@vercel/analytics/react'
+import { useEffect } from 'react'
 
 function MyApp({ Component, pageProps }) {
 	const router = useRouter()
 
-	// Define routes where ads should NOT load
-	const excludedRoutes = ['/loading', '/404', '/maintenance']
-
-	const shouldShowAds = !excludedRoutes.includes(router.pathname)
+	// Register Service Worker for PWA
+	useEffect(() => {
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('/sw.js').catch(() => {});
+		}
+	}, []);
 
 	return (
-		<AppHypertuneProvider>
+		<>
 			<Head>
-				{shouldShowAds && (
-					<script
-						async
-						src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9872384661755732"
-						crossOrigin="anonymous"
-					/>
-				)}
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<meta name="theme-color" content="#050505" />
+				<link rel="manifest" href="/manifest.json" />
+				<link rel="apple-touch-icon" href="/icons/icon-192.png" />
 			</Head>
 
-			<Particles options={particlesConfig} />
 			<Component {...pageProps} />
 			<CookieBanner />
-		</AppHypertuneProvider>
+			<Analytics />
+		</>
 	)
 }
 
